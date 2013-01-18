@@ -9,3 +9,5 @@ magnitudeFormat = (number) ->
   suffixIndex = Math.floor(logBase1K)
   suffix = MAGNITUDE_SUFFIXES[suffixIndex]
   shortNum = Math.round(number / Math.pow(1000, suffixIndex))
+
+  '' + shortNum + suffix
