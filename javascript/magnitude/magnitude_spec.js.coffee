@@ -1,7 +1,7 @@
 describe 'magnitude format', ->
 
   expectMagToBe = (num, str) ->
-    expect(magnitudeFormat(num)).toBe str
+    expect(Magnitude.format(num)).toBe str
 
   it 'should work', ->
     expectMagToBe 0, '0'
