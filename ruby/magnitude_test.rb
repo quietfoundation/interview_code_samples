@@ -1,11 +1,13 @@
 require './magnitude.rb'
 
 def assert_equal(a, b)
-  raise "Failure #{a} doesn't equal #{b}" if a != b
+  str = Magnitude.format(a)
+  raise "Failure #{str} doesn't equal #{b}" if str != b
 end
 
-assert_equal Magnitude.format(100), '100'
-assert_equal Magnitude.format(10000), '10K'
-assert_equal Magnitude.format(10000000), '10M'
-assert_equal Magnitude.format(10000000000), '10B'
-assert_equal Magnitude.format(10000000000000), '10T'
+assert_equal 0, '0'
+assert_equal 10, '10'
+assert_equal 23456, '23K'
+assert_equal 312344000, '312M'
+assert_equal 1454000000, '1B'
+assert_equal 12344000000000, '12T'

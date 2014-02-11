@@ -2,7 +2,7 @@ LOG_BASE1K_DIVSOR = Math.log(1000)
 
 MAGNITUDE_SUFFIXES = ['', 'K', 'M', 'B', 'T']
 
-window.Magnitude =
+@Magnitude =
   format: (number) ->
     return '' + number if number < 1000
 
